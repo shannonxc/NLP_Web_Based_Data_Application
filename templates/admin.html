@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<form action = "/admin" method = "POST">
+    <h2><span>Add New Job Advertisement Post</span></h2>
+
+    <p>Title* :</p>
+    <p><input type = "text" name = "title" style="width:100%" value="{{ title }}" required/></p>
+
+    <p>Company Name:</p>
+    <p><input type = "text" name = "company" style="width:100%" value="{{ company }}"/></p>
+
+    <p>Description* :</p>
+    <textarea type="text" name="description" style="height:200px; width:100%" required> {{ description }} </textarea>
+
+    <p>Salary:</p>
+    <p><input type = "text" name = "salary" style="width:100%" value="{{ salary }}"/></p>
+
+    <p> <label for="file">Recommended Category*: </label> </p>
+    <input type="text" name="category" value="{{ prediction }}">
+    <p>
+        <input type="submit" name="button" value="Classify" />
+        <input type="submit" name="button" value="Save">
+    </p>
+    <p style="color:red"> {{ category_flag }} </p>
+ </form> 
+
+{% endblock %}
+
+

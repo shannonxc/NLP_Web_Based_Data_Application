@@ -1,0 +1,31 @@
+<!DOCTYPE html">
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" media="all" />
+<script src="{{ url_for('static', filename='jquery-3.6.0.js') }}"></script>
+</head>
+
+<body>
+    <div class='header'>
+      <a href="/" class='logo'> XDream job </a>
+        <ul class="header-right">
+            <li> <a href="/admin"> Admin </a> </li>
+
+            <li> <a href="/sales"> Sales </a> </li>
+            <li> <a href="/healthcare"> Healthcare Nursing </a> </li>
+            <li> <a href="/engineering"> Engineering </a> </li>
+            <li> <a href="/accounting"> Accounting Finance </a> </li>
+            <li> <a href="/" class="active"> Home </a> </li>
+        </ul>
+    </div>
+
+{% block body %}
+{% endblock %}
+
+
+{% block script %}
+{% endblock %}
+
+</body>
+</html>
+
